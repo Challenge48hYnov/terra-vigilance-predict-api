@@ -1,15 +1,17 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-import pandas as pd
 import joblib
-import xgboost as xgb
 import uvicorn
+import datetime
+import pandas as pd
+import xgboost as xgb
+from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException
 
 # 1. Définition du schéma d'entrée aligné sur les features utilisées (X)
 class InputData(BaseModel):
     sismicite: float
     concentration_gaz: float
     pluie_totale: float
+    timestamp: float
     quartier: int
 
 # 2. Chargement du préprocesseur et du modèle XGBoost
