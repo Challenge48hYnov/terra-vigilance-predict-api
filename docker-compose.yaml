@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: terra-vigilance-predict-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./datasets:/app/datasets
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
