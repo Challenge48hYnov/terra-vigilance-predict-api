@@ -1,0 +1,24 @@
+# Ignorer les environnements virtuels
+.venv
+venv
+env
+
+# Ignorer les fichiers Python compilés et les caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer les fichiers de configuration d'IDE et autres
+.vscode/
+.idea/
+.DS_Store
+
+# Ignorer les dossiers de build et de distribution locaux
+build/
+dist/
+*.egg-info/
+
+# Fichiers spécifiques au projet que vous ne voulez pas inclure
+*.log
+local_settings.py
